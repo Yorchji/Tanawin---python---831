@@ -209,7 +209,7 @@ print("=" * 50)
 print("DEMO 6: Common Mistakes")
 print("=" * 50)
 
-# Mistake 1: Integer division in older Python versions
+ # Mistake 1: Integer division in older Python versions
 print("Watch out for division:")
 print("In Python 3: 5 / 2 =", 5 / 2, "(float)")
 print("Floor division: 5 // 2 =", 5 // 2, "(integer)")
