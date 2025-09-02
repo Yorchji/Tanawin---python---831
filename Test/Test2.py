@@ -10,4 +10,4 @@ def weather_suggestion(temp):
     #ทดสอบฟังก์ชัน
     test_temps= [38,30,22,18]
     for t in test_temp:
-        print(f" Temp{t}"c {weather_suggestion(t)}")
+        print(f" Temp{t} {weather_suggestion(t)}")
