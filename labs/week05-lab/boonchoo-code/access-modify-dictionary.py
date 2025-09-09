@@ -31,7 +31,7 @@ print(f"Items: {list(student.items())}")
 """ modify dictionary """
 
 
-# Creating a dictionary
+# Creating a dictionary/ inventory คือ dictionary apples คือ Key 50 คือ values ถ้า apples : 50 คือ item
 inventory = {
     "apples": 50,
     "bananas": 30,
@@ -60,10 +60,10 @@ inventory.update(apples=60, bananas=55)
 print(f"After keyword update: {inventory}")
 
 # Removing items
-removed_item = inventory.pop("strawberries")  # Remove and return value
+removed_item = inventory.pop("strawberries")  # Remove and return value อันนี้คืนถ้าต้องการเอามาทำงาน ต้องรู้Key 
 print(f"Removed {removed_item} strawberries")
 
-del inventory["pineapples"]  # Remove without returning
+del inventory["pineapples"]  # Remove without returning อันนี้คือลบไปเลย
 print(f"After deletions: {inventory}")
 
 # Remove last item (Python 3.7+)
