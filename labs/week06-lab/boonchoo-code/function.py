@@ -99,7 +99,7 @@ print("Circle calculations:")
 radius = 5
 area, circumference = get_circle_info(radius)
 print(f"Circle with radius {radius}:")
-print(f"Area: {area:.2f}")
+print(f"Area: {area:.2f}")  
 print(f"Circumference: {circumference:.2f}")
 print()
 

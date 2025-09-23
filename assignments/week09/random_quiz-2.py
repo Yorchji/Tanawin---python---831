@@ -11,6 +11,7 @@ Progressive hint system:
     After 3 wrong guesses: Show if number is odd/even
     After 5 wrong guesses: Show if divisible by 3 or 5
     After 7 wrong guesses: Narrow the range to 25-number window
+    บรรทัดที่13 ลดสโคปโดนการเลือก12ตัวก่อนหน้ารวมตัวที่สุ่มมาเป็น13ละตัวหลังอีก12เป็น25ตัว
     After 10 wrong guesses: Show first digit
     
 Example 
@@ -43,7 +44,7 @@ Example
 import random
 
 def get_parity_hint(number):
-    if number % 2 == 0:
+    if number % 2 == 0: # % คือเเทนด้วยหาร
         return "HINT: The number is even" 
     else:
         return "HINT: The number is odd"
@@ -58,8 +59,40 @@ def get_divisibility_hint(number):
 
 def get_range_hint(number, current_min=1, current_max=100):
     # Return narrowed range around the number
-    pass
+    print(f"HINT: The narrow range arount the number is {range(number-12, number+12)}")
 
 def get_thefirst_digit_hint(number):
     # Retun the first digit of the number
-    pass
+    result = str(number)
+    print(f"HINT: The first digit of the number is {result[0]}")
+
+print(" === Enhanced GUESSING GAME ===")
+print("Guess my number between 1 and 100!")
+print("You have unlimited attempts.")
+
+random_number = random.randint(1, 100)
+
+attemp = 1
+
+while  True:
+    guess_number = int(input(f"Attemp {attemp} - Enter your guess:"))
+
+    if random_number == guess_number:
+        print(f"Congratulation! you Won in {attemp} attemp")
+        break
+    elif random_number < guess_number:
+        print("Too hight! Try again.")
+    else:
+        print("Too low! Try again.")
+
+    if attemp == 3:
+        get_parity_hint(random_number)
+
+    elif attemp == 5:
+        get_divisibility_hint(random_number)
+    elif attemp == 7 :
+        get_range_hint(random_number)
+    elif attemp == 10:
+        get_thefirst_digit_hint(random_number)
+
+        attemp = attemp + 1
