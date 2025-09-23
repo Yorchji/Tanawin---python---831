@@ -72,27 +72,27 @@ print("You have unlimited attempts.")
 
 random_number = random.randint(1, 100)
 
-attemp = 1
+attempt = 1
 
 while  True:
-    guess_number = int(input(f"Attemp {attemp} - Enter your guess:"))
+    guess_number = int(input(f"Attempt {attempt} - Enter your guess:"))
 
     if random_number == guess_number:
-        print(f"Congratulation! you Won in {attemp} attemp")
+        print(f"Congratulation! you Won in {attempt} attempt")
         break
     elif random_number < guess_number:
         print("Too hight! Try again.")
     else:
         print("Too low! Try again.")
 
-    if attemp == 3:
+    if attempt == 3:
         get_parity_hint(random_number)
 
-    elif attemp == 5:
+    elif attempt == 5:
         get_divisibility_hint(random_number)
-    elif attemp == 7 :
+    elif attempt == 7 :
         get_range_hint(random_number)
-    elif attemp == 10:
+    elif attempt == 10:
         get_thefirst_digit_hint(random_number)
 
-        attemp = attemp + 1
+        attempt = attempt + 1
