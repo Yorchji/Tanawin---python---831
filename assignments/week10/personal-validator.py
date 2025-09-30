@@ -30,9 +30,9 @@ Phone: +91-9876543210
 """
 
 print("=== PERSONAL INfORMATION VALIDATOR ===")
-#name = input("Enter your name: ")
-#age = input("Enter your age: ")
-#phone_number = input("Enter your phone number: ")
+name = input("Enter your name: ")
+age = input("Enter your age: ")
+phone_number = input("Enter your phone number: ")
 
 name = "John Doe"
 age = "25"
