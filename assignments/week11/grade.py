@@ -55,5 +55,5 @@ def display_results(students):
          print("Status: FAIL")
 
 students_list = input_students()
-students_list = calculate_average(students_list)
+students_list = calculate_averages(students_list)
 display_results(students_list)
