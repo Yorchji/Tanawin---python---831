@@ -14,13 +14,13 @@ fruits.update(["kiwi", "mango"])
 print(f"After adding multiple: {fruits}")
 
 # Removing elements
-fruits.remove("banana")  # Raises error if not found
+fruits.remove("banana")  # Raises error if not found อันนี้ถ้าไม่มีในFruitsจะError
 print(f"After removing banana: {fruits}")
 
-fruits.discard("pineapple")  # No error if not found
+fruits.discard("pineapple")  # No error if not found อันนี้คือไม่สนว่ามีหรือไม่มี
 print(f"After discarding pineapple: {fruits}")
 
-removed_fruit = fruits.pop()  # Remove arbitrary element
+removed_fruit = fruits.pop()  # Remove arbitrary element อันนี้ลบโดยเอาไปทำงานต่อ
 print(f"Removed: {removed_fruit}")
 print(f"Remaining fruits: {fruits}")
 
