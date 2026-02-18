@@ -4,6 +4,7 @@ public class Inventory {
     public static final int CRITICAL = 10;
     public static final int MIN = 0;
     public static final int MAX = 100;
+
     private int stockLevel;
 
     public Inventory() {
@@ -11,42 +12,51 @@ public class Inventory {
     }
 
     public boolean inventoryTooLow() {
-        if (stockLevel < CRITICAL)
-            return true;
-        else
-            return false;
+        return stockLevel < CRITICAL;
     }
 
     public void add(int amount) throws InventoryOverMaxException {
-        int temp;
-        temp = stockLevel + amount;
-        if (temp > MAX) {
-            InventoryOverMaxException anException = new
-                    InventoryOverMaxException
-                    ("Adding" + amount + "item will cause stock to become greater" + "than" + MAX + "units");
-            throw anException;
-        } else {
-            stockLevel = temp;
+        if (amount < 0) {
+            throw new IllegalArgumentException("Amount must be positive.");
         }
-    } //end of method add
+
+        int temp = stockLevel + amount;
+
+        if (temp > MAX) {
+            throw new InventoryOverMaxException(
+                "Adding " + amount + 
+                " item(s) will cause stock to become greater than " 
+                + MAX + " units."
+            );
+        }
+
+        stockLevel = temp;
+    }
 
     public void remove(int amount) throws InventoryUnderMinException {
-        int temp;
-        temp = stockLevel - amount;
-        if (temp < MIN) {
-            throw new InventoryUnderMinException
-                    ("Removing" + amount + "item will cause stock to become less than" + MIN + "units(understock)");
-        } else {
-            stockLevel = temp;
+        if (amount < 0) {
+            throw new IllegalArgumentException("Amount must be positive.");
         }
-    } //end of method remove
 
-    public String toString() {
-        return ("Inventory: " + stockLevel);
+        int temp = stockLevel - amount;
+
+        if (temp < MIN) {
+            throw new InventoryUnderMinException(
+                "Removing " + amount + 
+                " item(s) will cause stock to become less than " 
+                + MIN + " units (understock)."
+            );
+        }
+
+        stockLevel = temp;
     }
 
-    public int getStockLevel()
-    {
+    public int getStockLevel() {
         return stockLevel;
     }
-} //end of class Inventory
+
+    @Override
+    public String toString() {
+        return "Inventory: " + stockLevel;
+    }
+}

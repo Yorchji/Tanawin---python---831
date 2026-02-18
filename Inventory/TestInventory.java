@@ -1,4 +1,4 @@
-package inventory;
+package Inventory;
 
 public class TestInventory {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package inventory;
+package Inventory;
 
 public class InventoryOverMaxException extends Exception
 {
