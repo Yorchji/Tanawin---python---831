@@ -1,4 +1,4 @@
-package inventory;
+package Inventory;
 
 public class Inventory {
     public static final int CRITICAL = 10;
