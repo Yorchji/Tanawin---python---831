@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #ecfdf5, #d1fae5); /* เขียวมิ้นต์อ่อนหรู */
+}
+
+/* ===== Container ===== */
+.container {
+    max-width: 900px;
+    margin: 60px auto;
+    background: #f1fdf6; /* พื้นเขียวอ่อนสะอาด */
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(16, 94, 73, 0.18);
+}
+
+/* ===== Title ===== */
+h1 {
+    text-align: center;
+    color: #0f2e25; /* เขียวเข้มลักชู */
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+/* ===== Grid ===== */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    color: #145c4a; /* เขียวกลาง */
+    font-weight: 600;
+}
+
+/* ===== Inputs ===== */
+.form-group input {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #6ee7b7; /* emerald soft */
+    background: #ecfdf5;
+    color: #0f2e25;
+    transition: 0.25s ease;
+}
+
+.form-group input:focus {
+    border-color: #10b981; /* emerald */
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.20);
+    outline: none;
+    background: #ffffff;
+}
+
+/* ===== Image Box ===== */
+.image-box {
+    margin-top: 20px;
+}
+
+.image-box img {
+    width: 180px;
+    border-radius: 14px;
+    box-shadow: 0 6px 15px rgba(16, 185, 129, 0.25);
+}
+
+/* ===== Buttons ===== */
+.btn-box {
+    margin-top: 35px;
+    display: flex;
+    gap: 15px;
+}
+
+/* Update Button */
+.btn-update {
+    background: linear-gradient(135deg, #10b981, #047857);
+    color: #ffffff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-update:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.45);
+}
+
+/* Back Button */
+.btn-back {
+    background: #d1fae5;
+    color: #065f46;
+    padding: 12px 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn-back:hover {
+    background: #a7f3d0;
+}

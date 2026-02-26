@@ -1,0 +1,162 @@
+/* ===== MANAGE ORDERS PAGE ===== */
+.dashboard-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 40px auto;
+    background: #f1fdf6; /* soft mint card */
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(6, 95, 70, 0.18);
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0f2e25; /* deep emerald */
+    margin-bottom: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.table-card {
+    background: #ecfdf5;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(6, 95, 70, 0.12);
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+/* ===== TABLE HEADER ===== */
+.orders-table thead {
+    background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+}
+
+.orders-table th {
+    padding: 16px 20px;
+    text-align: left;
+    color: #065f46;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+/* ===== TABLE BODY ===== */
+.orders-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #bbf7d0;
+    color: #145c4a;
+    vertical-align: middle;
+}
+
+.orders-table tr:hover {
+    background: #d1fae5;
+    transition: background 0.3s ease;
+}
+
+/* ===== Status Badge ===== */
+.status-badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    display: inline-block;
+}
+
+/* Pending - Gold Luxury */
+.status-badge.pending {
+    background: #fde68a;
+    color: #92400e;
+}
+
+/* Processing - Emerald Soft */
+.status-badge.processing {
+    background: #6ee7b7;
+    color: #064e3b;
+}
+
+/* Shipped - Deep Emerald */
+.status-badge.shipped {
+    background: #10b981;
+    color: white;
+}
+
+/* Completed - Dark Emerald */
+.status-badge.completed {
+    background: #047857;
+    color: white;
+}
+
+/* Cancelled - Elegant Red */
+.status-badge.cancelled {
+    background: #dc2626;
+    color: white;
+}
+
+/* ===== No Data ===== */
+.no-data {
+    text-align: center;
+    padding: 60px 0;
+    color: #145c4a;
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+    .dashboard-container {
+        width: 95%;
+        padding: 30px;
+    }
+
+    .orders-table th, 
+    .orders-table td {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .orders-table {
+        font-size: 0.9rem;
+    }
+
+    .orders-table thead {
+        display: none;
+    }
+
+    .orders-table tr {
+        display: block;
+        margin-bottom: 20px;
+        border: 1px solid #bbf7d0;
+        border-radius: 12px;
+        background: #ecfdf5;
+    }
+
+    .orders-table td {
+        display: block;
+        text-align: right;
+        padding: 10px 15px;
+        border: none;
+        border-bottom: 1px solid #d1fae5;
+        position: relative;
+    }
+
+    .orders-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: 600;
+        color: #065f46;
+    }
+
+    .orders-table td:last-child {
+        border-bottom: none;
+    }
+}

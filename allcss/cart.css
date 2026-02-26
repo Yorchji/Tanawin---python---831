@@ -1,0 +1,135 @@
+/* ===== CART PAGE - Luxury Green ===== */
+
+.cart-title {
+    text-align: center;
+    color: #e6fff4;
+    margin: 30px 0 40px;
+    font-size: 2.3rem;
+    letter-spacing: 1px;
+}
+
+/* ===== WRAPPER ===== */
+.cart-wrapper {
+    background: linear-gradient(135deg, #0f3a2c, #133f31);
+    border-radius: 22px;
+    padding: 30px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ===== ITEM ===== */
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+/* ===== IMAGE ===== */
+.cart-img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 1px solid #1f5c45;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.no-image-cart {
+    width: 90px;
+    height: 90px;
+    background: #0c3327;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9fd3b5;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+/* ===== DETAILS ===== */
+.cart-details h3 {
+    margin: 0 0 6px;
+    font-size: 1.15rem;
+    color: #d7fff1;
+}
+
+.quantity,
+.price-item {
+    margin: 4px 0;
+    color: #bfe8d8;
+    font-size: 0.95rem;
+}
+
+/* ===== SUBTOTAL ===== */
+.cart-subtotal {
+    font-weight: 700;
+    color: #9fd3b5;
+    font-size: 1.15rem;
+    min-width: 110px;
+    text-align: right;
+}
+
+/* ===== REMOVE BUTTON ===== */
+.remove-btn {
+    color: #ff8c8c;
+    font-size: 1.3rem;
+    transition: 0.3s;
+}
+
+.remove-btn:hover {
+    color: #ffb3b3;
+    transform: scale(1.15);
+}
+
+/* ===== TOTAL ===== */
+.cart-total {
+    margin-top: 35px;
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e6fff4;
+    padding-top: 25px;
+    border-top: 2px solid #1f5c45;
+}
+
+.cart-total strong {
+    color: #9fd3b5;
+    font-size: 1.7rem;
+}
+
+/* ===== EMPTY ===== */
+.empty-cart {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #bfe8d8;
+    padding: 70px 0;
+}
+
+/* ===== ACTIONS ===== */
+.cart-actions {
+    text-align: right;
+    margin-top: 35px;
+}
+
+/* ===== CHECKOUT BUTTON ===== */
+.btn-checkout {
+    background: linear-gradient(135deg, #9fd3b5, #7fbf9d);
+    color: #083b2c;
+    padding: 14px 45px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-checkout:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
